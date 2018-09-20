@@ -1,11 +1,11 @@
 /* Lets pick colours! */
-
+/*
 :root {
   --bg-color: #fff;
   --text-color: #000;
   --highlight-color: #000;
   --link-color: blue;
-}
+} */
 
 body, html {
   color: var(--text-color);
@@ -13,60 +13,70 @@ body, html {
 
   /*Declare your font*/
   font-family: serif;
+  width: 100vw;
+
 }
 
-/*choose your type heirarchy*/
-h1,h2,h3,h4 {font-weight: 700;}
-h1 {font-size: 3rem;}
-h2 {font-size: 2rem;}
-h3 {font-size: 1rem;}
-h4 {font-size: 1rem;}
-
-b {font-weight: 700;}
-i {font-style: italic;}
-a {color: var(--link-color)}
-
-/*basic structure*/
-.container {
+.landing-page {
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  margin: 0 auto;
-  max-width: 50rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
 }
 
-.col-1 {
-  flex-grow: 2;
-  flex-shrink: 2;
-  flex-basis: 66%;
+.landing-photo {
+  background: url("./mobilemain.jpg");
+  height: 80vh;
+  width: 80vw;
+  background-size: cover;
 }
 
-.col-2 {
-  flex-grow: 1;
-  flex-shrink: 2;
-  flex-basis: 33%;
+.name {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 3rem;
+}
+
+.page-two-link > a {
+  font-family: 'Roboto Mono', monospace;
+  color: black;
+}
+
+.page-two {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bio-name-display {
+  background-color: rgba(211,211,211,1);
+  margin: 2rem;
+}
+
+.thumbnails-selector {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.thumbnails-selector > div {
+  height: 10vw;
+  width: 10vw;
+  background-color: rgb(255,239,213);
+  margin: 1rem;
 }
 
 
-/*Header*/
 
-header .container {
-  padding-bottom: 2rem;
-  border-bottom: 2px solid black;
-}
+@media (min-width: 960px) {
 
-/*content*/
-
-.bio {flex-direction: column;}
-.bio p, .bio ul li {margin-bottom: 1rem;}
-
-ul.jobs li {
-  padding-right: 2rem;
-  margin-bottom: 2rem;
-}
-
-/*footer*/
-footer .container {
-  padding: 2rem 0;
-  border-top: 2px solid black;
+  .landing-photo {
+    background: url("./main.jpg");
+    height: 80vh;
+    width: 80vw;
+    background-size: cover;
+  }
 }
